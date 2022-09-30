@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;700&family=Outfit:wght@100;300;500;700&family=Poppins&family=Source+Sans+Pro:wght@300;400;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* General */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+
+.container {
+    text-align: center;
+}
+
+.hero {
+    margin-top: 2.5em;
+
+}
+
+.title {
+    font-family: 'IvyPresto Display';
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 100px;
+}
+
+.subtitle {
+    font-family: "Poppins";
+    font-style: italic;
+    font-size: 18px;
+    line-height: 23px;
+    color: #D3a79D;
+    text-shadow: -1px 1px 0 #000;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 2em;
+    margin-top: 1.5em;
+}
+
+.paragraph {
+    /* width: 750 */
+    height: 100px;
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 26px;
+    max-width: 50em !important;
+    text-align: left;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Tab Section */
+
+.lead {
+    font-family: "poppins";
+    font-size: 22px;
+    line-height: 36px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+}
+
+.tabs input[name="tab-control"] {
+    display: none;
+}
+
+.tabs .content section h2,
+.tabs ul li label {
+    margin: 0 2vw; 
+    color: #D3a79D;
+    text-decoration: underline;
+}
+
+.tabs ul {
+    font-size: 1.5vw;
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 2.5em;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.tabs ul li {
+    box-sizing: border-box;
+    flex: 1;
+    width: 25%;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.tabs ul li label {
+    transition: all 0.3s ease-in-out;
+    color: #000000;
+    padding: 5px auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+    -webkit-touch-callout: none;
+}
+
+.tabs ul li label br {
+    display: none;
+}
+
+.tabs ul li label svg {
+    fill: #D3a79D;
+    transition: all 0.4s ease;
+}
+
+.tabs ul li label:hover,
+.tabs ul li label:focus,
+.tabs ul li label:active {
+    outline: 0;
+    color:#D3a79D;
+}
+
+.tabs ul li label:active svg {
+    fill: #D3a79D;
+}
+
+.tabs .content {
+    margin-top: 3vh;
+}
+
+.tabs .content img {
+    width: 100%;
+    display: absolute;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.tabs .content section {
+    display: none;
+    line-height: 1.4;
+}
+
+.tabs .content section h2 {
+    color: #D3a79D;
+    display: none;
+}
+
+.tabs .content section h2::after {
+    content: "";
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #D3a79D;
+    margin-top: 5px;
+    left: 1px;
+}
+
+/* Dermal Fillers Tab Section */
+
+.tabs
+    input[name="tab-control"]:nth-of-type(1):checked
+    ~ ul
+    > li:nth-child(1)
+    > label {
+    cursor: default;
+    color: #D3a79D;
+}
+
+.tabs
+    input[name="tab-control"]:nth-of-type(1):checked
+    ~ ul
+    > li:nth-child(1)
+    > label
+    svg {
+    fill: #D3a79D;
+    transform: rotate(90deg);
+}
+
+@media (max-width: 600px) {
+    .tabs
+      input[name="tab-control"]:nth-of-type(1):checked
+      ~ ul
+      > li:nth-child(1)
+      > label {
+      background: rgba(0, 0, 0, 0.08);
+    }
+}
+
+.tabs
+    input[name="tab-control"]:nth-of-type(1):checked
+    ~ .content
+    > section:nth-child(1) {
+    display: block;
+}
+
+/* CoolSculpting Elite Tab Section */
+
+.tabs
+    input[name="tab-control"]:nth-of-type(2):checked
+    ~ ul
+    > li:nth-child(2)
+    > label {
+    cursor: default;
+    color: #D3a79D;
+}
+
+.tabs
+    input[name="tab-control"]:nth-of-type(2):checked
+    ~ ul
+    > li:nth-child(2)
+    > label
+    svg {
+    fill: #D3a79D;
+    transform: rotate(90deg);
+}
+
+.tabs
+    input[name="tab-control"]:nth-of-type(2):checked
+    ~ .content
+    > section:nth-child(2) {
+    display: block;
+}
+
+/* QWO Tab Section */
+
+.tabs
+    input[name="tab-control"]:nth-of-type(3):checked
+    ~ ul
+    > li:nth-child(3)
+    > label {
+    cursor: default;
+    color: #D3a79D;
+}
+
+.tabs
+    input[name="tab-control"]:nth-of-type(3):checked
+    ~ ul
+    > li:nth-child(3)
+    > label
+    svg {
+    fill: #D3a79D;
+    transform: rotate(90deg);
+}
+
+.tabs
+    input[name="tab-control"]:nth-of-type(3):checked
+    ~ .content
+    > section:nth-child(3) {
+    display: block;
+}
+
+/* Advanced Lasers Tab Section */
+
+.tabs
+    input[name="tab-control"]:nth-of-type(4):checked
+    ~ ul
+    > li:nth-child(4)
+    > label {
+    cursor: default;
+    color: #D3a79D;
+}
+
+.tabs
+    input[name="tab-control"]:nth-of-type(4):checked
+    ~ ul
+    > li:nth-child(4)
+    > label
+    svg {
+    fill: #D3a79D;
+    transform: rotate(90deg);
+}
+
+.tabs
+    input[name="tab-control"]:nth-of-type(4):checked
+    ~ .content
+    > section:nth-child(4) {
+    display: block;
+}
+
+/* Microneedling Tab Section */
+
+.tabs
+    input[name="tab-control"]:nth-of-type(5):checked
+    ~ ul
+    > li:nth-child(5)
+    > label {
+    cursor: default;
+    color: #D3a79D;
+}
+
+.tabs
+    input[name="tab-control"]:nth-of-type(5):checked
+    ~ ul
+    > li:nth-child(5)
+    > label
+    svg {
+    fill: #D3a79D;
+    transform: rotate(90deg);
+}
+
+.tabs
+    input[name="tab-control"]:nth-of-type(5):checked
+    ~ .content
+    > section:nth-child(5) {
+    display: block;
+}
+
+/* Botox Tab Section */
+.tabs
+    input[name="tab-control"]:nth-of-type(6):checked
+    ~ ul
+    > li:nth-child(6)
+    > label {
+    cursor: default;
+    color: #D3a79D;
+}
+
+.tabs
+    input[name="tab-control"]:nth-of-type(6):checked
+    ~ ul
+    > li:nth-child(6)
+    > label
+    svg {
+    fill: #D3a79D;
+    transform: rotate(90deg);
+}
+
+.tabs
+    input[name="tab-control"]:nth-of-type(6):checked
+    ~ .content
+    > section:nth-child(6) {
+    display: block;
+}
+  
+ @keyframes content {
+    from {
+      opacity: 0;
+      transform: translateY(5%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+
+/* Selector Content */
+
+.content h1 {
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 60px;
+}
+
+.content p {
+    margin: 2em 3em 0em 3em;
+    font-family: 'Poppins';
+}
+
+.content img {
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.content .card {
+    margin-top: 12vw;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 674px;
+    height: 430px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+    box-shadow: 0px 4px 4px rgba(0,0,0,0, 2.5);
+    border-radius: 0px;
+    opacity: 90%;
+    left: 120px;
+}
+
+.content button {
+    position: absolute;
+    margin-top: 53.5%;
+    margin-left: 2em;
+    cursor: pointer;
+    font-family: "Poppins";
+    font-size: 20px;
+    max-width: 40%;
+    background: #FBE0DA;
+    padding: 8px 25px 11px;
+    border: none;
+}
+
+.content button:hover {
+    transition: .2s ease-out;
+    opacity: 50%;
+}
+
+  
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+  
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 1)
+}
+  
+.header li {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+  
+.header li a:hover,
+.header .menu-btn:hover {
+    color: #D3a79D;
+    cursor: pointer;
+}
+
+  
+  /* Menu */
+  
+.header .menu {
+    clear: both;
+    font-size: 20px;
+    max-height: 0;
+    text-align: center;
+    transition: max-height .2s ease-out;
+}
+  
+  /* Menu Hamburger */
+  
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+  
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+  
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+  
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+  
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+  
+/* Navigation button */
+  
+.header .menu-btn {
+    display: none;
+}
+  
+.header .menu-btn:checked ~ .menu {
+    max-height: 100%;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+  
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+
+.btn {
+    cursor: pointer;
+  }
+  
+.active, .btn:hover {
+    color: #D3a79D;
+}
+
+/* RESPONSIVE */
+@media (min-width: 86em) {
+    .title {
+        margin-top: 5px;
+    }
+    
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      display: none;
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    
+    .header .menu-icon {
+      display: none;
+    }
+
+  }
+  
+@media (max-width: 86em) {
+
+    .tabs ul li span {
+        display: none;
+    }
+    .paragraph {
+        padding: 0 2em;
+    }
+    .title {
+        margin-top: 5rem;
+        line-height: .6
+    }
+    .content .card {
+        padding: 50px;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        left: 0;
+    }
+
+    .content img {
+        height: 50%;
+    }
+    .content button {
+       display: none;
+    }
+
+  }
+
+@media (max-width: 48em) {
+    
+    .paragraph {
+        padding: 0 2em;
+        margin-top: -1em;
+    }
+
+    .content .card{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100vw;
+        height: 100vw;
+        opacity: 100%;
+        left: 0;
+    }
+
+    .content p {
+        line-height: 1.5em;
+    }
+
+    .content img {
+        height: 95vw;
+    }
+  }
