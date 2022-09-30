@@ -603,3 +603,9 @@ body {
         height: 95vw;
     }
   }
+
+@media (max-width: 48em) {
+    .content p {
+        font-size: 2.5vw;
+    }
+  }
